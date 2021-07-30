@@ -11,6 +11,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var shadeCountLabel: UILabel!
 
+    @IBOutlet weak var mainMenuButton: UIButton!
     var count = 0
     
     override func viewDidLoad() {
@@ -23,6 +24,10 @@ class ViewController: UIViewController {
         shadeCountLabel.text = "Shade Count \(count)"
     }
     
-
+    @IBAction func mainMenuButtton(_ sender: UIButton) {
+        performSegue(withIdentifier: "mainMenu", sender: nil)
+        
+    }
+    
 }
 

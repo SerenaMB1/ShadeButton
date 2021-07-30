@@ -13,6 +13,7 @@
 		0C98465B26A71B2B00F267C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C98465926A71B2B00F267C9 /* Main.storyboard */; };
 		0C98465D26A71B2E00F267C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C98465C26A71B2E00F267C9 /* Assets.xcassets */; };
 		0C98466026A71B2E00F267C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C98465E26A71B2E00F267C9 /* LaunchScreen.storyboard */; };
+		0C98466826B2BFD700F267C9 /* MainMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C98466726B2BFD700F267C9 /* MainMenuTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		0C98465C26A71B2E00F267C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C98465F26A71B2E00F267C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0C98466126A71B2E00F267C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0C98466726B2BFD700F267C9 /* MainMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				0C98465326A71B2B00F267C9 /* AppDelegate.swift */,
 				0C98465526A71B2B00F267C9 /* SceneDelegate.swift */,
 				0C98465726A71B2B00F267C9 /* ViewController.swift */,
+				0C98466726B2BFD700F267C9 /* MainMenuTableViewController.swift */,
 				0C98465926A71B2B00F267C9 /* Main.storyboard */,
 				0C98465C26A71B2E00F267C9 /* Assets.xcassets */,
 				0C98465E26A71B2E00F267C9 /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 				0C98465826A71B2B00F267C9 /* ViewController.swift in Sources */,
 				0C98465426A71B2B00F267C9 /* AppDelegate.swift in Sources */,
 				0C98465626A71B2B00F267C9 /* SceneDelegate.swift in Sources */,
+				0C98466826B2BFD700F267C9 /* MainMenuTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
