@@ -76,7 +76,7 @@
             </objects>
             <point key="canvasLocation" x="886.95652173913049" y="61.607142857142854"/>
         </scene>
-        <!--Main Menu Table View Controller-->
+        <!--Main Menu-->
         <scene sceneID="oue-OD-WGy">
             <objects>
                 <tableViewController id="z2w-P9-Y32" customClass="MainMenuTableViewController" customModule="Shade" customModuleProvider="target" sceneMemberID="viewController">
@@ -99,28 +99,49 @@
                             <outlet property="delegate" destination="z2w-P9-Y32" id="MiF-tP-Car"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="2Yw-ak-Dpc"/>
+                    <navigationItem key="navigationItem" title="Main Menu" id="2Yw-ak-Dpc"/>
+                    <connections>
+                        <segue destination="kor-3l-OAm" kind="show" identifier="Statistics" id="Wif-Na-WGk"/>
+                        <segue destination="l0C-Nb-Gxk" kind="show" identifier="Theme" id="oHE-93-IUE"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="va7-0n-KnZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1626.0869565217392" y="61.607142857142854"/>
         </scene>
-        <!--View Controller-->
+        <!--Statistics-->
         <scene sceneID="lZY-VO-BV6">
             <objects>
                 <viewController id="kor-3l-OAm" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4jI-e2-Fzd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Daily Shade Count:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cs0-lw-XuA">
+                                <rect key="frame" x="20" y="153" width="145" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total Shade Count:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="daf-ce-Yyq">
+                                <rect key="frame" x="20" y="201" width="145" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="nbg-kA-eR5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Statistics" id="x8U-k2-wVy"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BjD-9r-GAt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2397" y="-230"/>
         </scene>
-        <!--View Controller-->
+        <!--Change Theme-->
         <scene sceneID="Foi-Vg-0Dv">
             <objects>
                 <viewController id="l0C-Nb-Gxk" sceneMemberID="viewController">
@@ -130,6 +151,7 @@
                         <viewLayoutGuide key="safeArea" id="YHb-by-3kP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Change Theme" id="12Z-Tv-R0P"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Abz-oL-RpQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
