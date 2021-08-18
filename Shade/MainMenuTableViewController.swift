@@ -29,7 +29,13 @@ class MainMenuTableViewController: UITableViewController {
         return cell
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         performSegue(withIdentifier: "Statistics", sender: nil)
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let statisticsVC = segue.destination as! StatisticsViewController
+        //statisticsVC.count
     }
 }

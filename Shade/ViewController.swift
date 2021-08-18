@@ -12,12 +12,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var shadeCountLabel: UILabel!
 
     @IBOutlet weak var mainMenuButton: UIButton!
+    
     var count = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        // view.backgroundColor = .green
+         view.backgroundColor = .black  
     }
     @IBAction func shadeButton(_ sender: Any) {
         count += 1
@@ -25,7 +26,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func mainMenuButtton(_ sender: UIButton) {
-        performSegue(withIdentifier: "mainMenu", sender: nil)
+        performSegue(withIdentifier: "mainMenu", sender: count)
         
     }
     
