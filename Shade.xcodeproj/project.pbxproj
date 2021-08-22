@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0C487B8826CBC87A00E5882D /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C487B8726CBC87A00E5882D /* StatisticsViewController.swift */; };
+		0C487B8A26D0124500E5882D /* ShadeJournalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C487B8926D0124500E5882D /* ShadeJournalTableViewController.swift */; };
 		0C98465426A71B2B00F267C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C98465326A71B2B00F267C9 /* AppDelegate.swift */; };
 		0C98465626A71B2B00F267C9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C98465526A71B2B00F267C9 /* SceneDelegate.swift */; };
 		0C98465826A71B2B00F267C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C98465726A71B2B00F267C9 /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		0C487B8726CBC87A00E5882D /* StatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
+		0C487B8926D0124500E5882D /* ShadeJournalTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadeJournalTableViewController.swift; sourceTree = "<group>"; };
 		0C98465026A71B2B00F267C9 /* Shade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shade.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C98465326A71B2B00F267C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0C98465526A71B2B00F267C9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				0C98465326A71B2B00F267C9 /* AppDelegate.swift */,
+				0C487B8926D0124500E5882D /* ShadeJournalTableViewController.swift */,
 				0C98465526A71B2B00F267C9 /* SceneDelegate.swift */,
 				0C98465726A71B2B00F267C9 /* ViewController.swift */,
 				0C98466726B2BFD700F267C9 /* MainMenuTableViewController.swift */,
@@ -144,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C98465826A71B2B00F267C9 /* ViewController.swift in Sources */,
+				0C487B8A26D0124500E5882D /* ShadeJournalTableViewController.swift in Sources */,
 				0C487B8826CBC87A00E5882D /* StatisticsViewController.swift in Sources */,
 				0C98465426A71B2B00F267C9 /* AppDelegate.swift in Sources */,
 				0C98465626A71B2B00F267C9 /* SceneDelegate.swift in Sources */,
