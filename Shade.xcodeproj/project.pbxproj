@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		0C487B8826CBC87A00E5882D /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C487B8726CBC87A00E5882D /* StatisticsViewController.swift */; };
 		0C487B8A26D0124500E5882D /* ShadeJournalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C487B8926D0124500E5882D /* ShadeJournalTableViewController.swift */; };
+		0C487B8E26D3ADFC00E5882D /* EntriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C487B8D26D3ADFC00E5882D /* EntriesTableViewController.swift */; };
+		0C487B9026D3AE3500E5882D /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C487B8F26D3AE3500E5882D /* EntryViewController.swift */; };
+		0C487B9326D3E26300E5882D /* Shade.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0C487B9126D3E26300E5882D /* Shade.xcdatamodeld */; };
+		0C487B9626D3E39300E5882D /* Entry+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C487B9426D3E39300E5882D /* Entry+CoreDataClass.swift */; };
+		0C487B9726D3E39300E5882D /* Entry+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C487B9526D3E39300E5882D /* Entry+CoreDataProperties.swift */; };
 		0C98465426A71B2B00F267C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C98465326A71B2B00F267C9 /* AppDelegate.swift */; };
 		0C98465626A71B2B00F267C9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C98465526A71B2B00F267C9 /* SceneDelegate.swift */; };
 		0C98465826A71B2B00F267C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C98465726A71B2B00F267C9 /* ViewController.swift */; };
@@ -21,6 +26,11 @@
 /* Begin PBXFileReference section */
 		0C487B8726CBC87A00E5882D /* StatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
 		0C487B8926D0124500E5882D /* ShadeJournalTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadeJournalTableViewController.swift; sourceTree = "<group>"; };
+		0C487B8D26D3ADFC00E5882D /* EntriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntriesTableViewController.swift; sourceTree = "<group>"; };
+		0C487B8F26D3AE3500E5882D /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
+		0C487B9226D3E26300E5882D /* Shade.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shade.xcdatamodel; sourceTree = "<group>"; };
+		0C487B9426D3E39300E5882D /* Entry+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entry+CoreDataClass.swift"; sourceTree = "<group>"; };
+		0C487B9526D3E39300E5882D /* Entry+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entry+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		0C98465026A71B2B00F267C9 /* Shade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shade.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C98465326A71B2B00F267C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0C98465526A71B2B00F267C9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,15 +72,20 @@
 		0C98465226A71B2B00F267C9 /* Shade */ = {
 			isa = PBXGroup;
 			children = (
+				0C487B9426D3E39300E5882D /* Entry+CoreDataClass.swift */,
+				0C487B9526D3E39300E5882D /* Entry+CoreDataProperties.swift */,
 				0C98465326A71B2B00F267C9 /* AppDelegate.swift */,
 				0C487B8926D0124500E5882D /* ShadeJournalTableViewController.swift */,
 				0C98465526A71B2B00F267C9 /* SceneDelegate.swift */,
 				0C98465726A71B2B00F267C9 /* ViewController.swift */,
 				0C98466726B2BFD700F267C9 /* MainMenuTableViewController.swift */,
 				0C98465926A71B2B00F267C9 /* Main.storyboard */,
+				0C487B8F26D3AE3500E5882D /* EntryViewController.swift */,
+				0C487B8D26D3ADFC00E5882D /* EntriesTableViewController.swift */,
 				0C487B8726CBC87A00E5882D /* StatisticsViewController.swift */,
 				0C98465C26A71B2E00F267C9 /* Assets.xcassets */,
 				0C98465E26A71B2E00F267C9 /* LaunchScreen.storyboard */,
+				0C487B9126D3E26300E5882D /* Shade.xcdatamodeld */,
 				0C98466126A71B2E00F267C9 /* Info.plist */,
 			);
 			path = Shade;
@@ -146,11 +161,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C487B8E26D3ADFC00E5882D /* EntriesTableViewController.swift in Sources */,
 				0C98465826A71B2B00F267C9 /* ViewController.swift in Sources */,
 				0C487B8A26D0124500E5882D /* ShadeJournalTableViewController.swift in Sources */,
 				0C487B8826CBC87A00E5882D /* StatisticsViewController.swift in Sources */,
+				0C487B9726D3E39300E5882D /* Entry+CoreDataProperties.swift in Sources */,
+				0C487B9326D3E26300E5882D /* Shade.xcdatamodeld in Sources */,
+				0C487B9026D3AE3500E5882D /* EntryViewController.swift in Sources */,
 				0C98465426A71B2B00F267C9 /* AppDelegate.swift in Sources */,
 				0C98465626A71B2B00F267C9 /* SceneDelegate.swift in Sources */,
+				0C487B9626D3E39300E5882D /* Entry+CoreDataClass.swift in Sources */,
 				0C98466826B2BFD700F267C9 /* MainMenuTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -353,6 +373,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0C487B9126D3E26300E5882D /* Shade.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0C487B9226D3E26300E5882D /* Shade.xcdatamodel */,
+			);
+			currentVersion = 0C487B9226D3E26300E5882D /* Shade.xcdatamodel */;
+			path = Shade.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 0C98464826A71B2B00F267C9 /* Project object */;
 }

@@ -96,7 +96,7 @@
                     <connections>
                         <segue destination="kor-3l-OAm" kind="show" identifier="Statistics" id="Wif-Na-WGk"/>
                         <segue destination="l0C-Nb-Gxk" kind="show" identifier="Theme" id="oHE-93-IUE"/>
-                        <segue destination="e9S-K6-Gh2" kind="show" id="rHa-EW-aok"/>
+                        <segue destination="e9S-K6-Gh2" kind="show" identifier="Journal" id="rHa-EW-aok"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="va7-0n-KnZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -143,7 +143,7 @@
         <!--Shade Journal-->
         <scene sceneID="QLM-nM-er8">
             <objects>
-                <tableViewController id="e9S-K6-Gh2" sceneMemberID="viewController">
+                <tableViewController id="e9S-K6-Gh2" customClass="EntriesTableViewController" customModule="Shade" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="B9w-Uo-oLQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -166,42 +166,64 @@
                     <navigationItem key="navigationItem" title="Shade Journal" id="d4S-xl-O1d">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="square.and.pencil" catalog="system" id="X7Y-j8-DMV">
                             <color key="tintColor" systemColor="systemIndigoColor"/>
+                            <connections>
+                                <segue destination="yY4-Fn-fbL" kind="show" identifier="segueToEntry" id="Su1-4z-PNS"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <segue destination="yY4-Fn-fbL" kind="show" identifier="c" id="Ida-i3-qip"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZK0-wg-UXP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2415" y="452"/>
         </scene>
-        <!--View Controller-->
+        <!--Entry View Controller-->
         <scene sceneID="SBH-9N-c2O">
             <objects>
-                <viewController id="yY4-Fn-fbL" sceneMemberID="viewController">
+                <viewController id="yY4-Fn-fbL" customClass="EntryViewController" customModule="Shade" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="f1U-I4-c5i">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="6Uf-7j-U7G">
-                                <rect key="frame" x="0.0" y="106" width="414" height="216"/>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="6Uf-7j-U7G">
+                                <rect key="frame" x="47" y="108" width="320" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="XWi-eR-cSL"/>
+                                </constraints>
                             </datePicker>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="XzD-bj-HWU">
+                                <rect key="frame" x="20" y="228" width="374" height="565"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zc8-ZQ-cXN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Uf-7j-U7G" firstAttribute="trailing" secondItem="zc8-ZQ-cXN" secondAttribute="trailing" constant="20" id="Hvu-C1-jmp"/>
-                            <constraint firstItem="6Uf-7j-U7G" firstAttribute="leading" secondItem="zc8-ZQ-cXN" secondAttribute="leading" constant="20" id="cIC-i8-XvT"/>
-                            <constraint firstItem="6Uf-7j-U7G" firstAttribute="top" secondItem="zc8-ZQ-cXN" secondAttribute="top" constant="20" id="zL9-Ex-6or"/>
+                            <constraint firstItem="6Uf-7j-U7G" firstAttribute="top" secondItem="zc8-ZQ-cXN" secondAttribute="top" constant="20" id="CbS-fG-TYh"/>
+                            <constraint firstItem="6Uf-7j-U7G" firstAttribute="centerX" secondItem="f1U-I4-c5i" secondAttribute="centerX" id="GET-Vi-IOD"/>
+                            <constraint firstItem="XzD-bj-HWU" firstAttribute="top" secondItem="6Uf-7j-U7G" secondAttribute="bottom" constant="20" id="Q7t-KD-5Jv"/>
+                            <constraint firstItem="XzD-bj-HWU" firstAttribute="leading" secondItem="zc8-ZQ-cXN" secondAttribute="leading" constant="20" id="cn9-cH-WwW"/>
+                            <constraint firstItem="zc8-ZQ-cXN" firstAttribute="bottom" secondItem="XzD-bj-HWU" secondAttribute="bottom" constant="20" id="l7a-MK-KKS"/>
+                            <constraint firstItem="zc8-ZQ-cXN" firstAttribute="trailing" secondItem="XzD-bj-HWU" secondAttribute="trailing" constant="20" id="lIr-fo-TGI"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="9dU-rF-Q4n">
                         <barButtonItem key="backBarButtonItem" title="Back" id="alk-Hu-XoG"/>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="trash" catalog="system" id="6Jd-qk-qbu">
                             <color key="tintColor" systemColor="systemRedColor"/>
+                            <connections>
+                                <action selector="deleteTapped:" destination="yY4-Fn-fbL" id="ap8-cw-x0g"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="datePicker" destination="6Uf-7j-U7G" id="X8D-Xg-d7h"/>
+                        <outlet property="deleteTapped" destination="6Jd-qk-qbu" id="Wyb-Vp-2ox"/>
+                        <outlet property="entryTextView" destination="XzD-bj-HWU" id="88j-Pf-aq8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lce-my-XhH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -247,6 +269,9 @@
         <image name="pinkButton" width="526" height="515"/>
         <image name="square.and.pencil" catalog="system" width="128" height="115"/>
         <image name="trash" catalog="system" width="121" height="128"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
