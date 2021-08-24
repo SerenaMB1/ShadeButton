@@ -10,10 +10,10 @@ import UIKit
 class EntriesTableViewController: UITableViewController {
     
     var entries: [Entry] = []
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
     }
     override func viewWillAppear(_ animated: Bool) {
         if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
@@ -24,25 +24,32 @@ class EntriesTableViewController: UITableViewController {
             }
         }
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return entries.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        
-        let entry = entries[indexPath.row]
-        
-        cell.textLabel?.text = entry.text
-        return cell
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "EntryCell") {
+            
+            let entry = entries[indexPath.row]
+            
+            //cell.textLabel?.text = entry.text
+            return cell
+        } else {
+            return UITableViewCell()
+        }
     }
-        
+    
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let entry = entries[indexPath.row]
         performSegue(withIdentifier: "segueToEntry", sender: entry)
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let entryVC = segue.destination as? EntryViewController {
@@ -51,5 +58,5 @@ class EntriesTableViewController: UITableViewController {
             }
         }
     }
-  
+    
 }
