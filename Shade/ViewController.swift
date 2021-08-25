@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
     
@@ -14,6 +15,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var mainMenuButton: UIButton!
     
     var buttonPress:Int = 0
+    let shadeSound = Bundle.main.url(forResource: "shade", withExtension: "mp3")
+    var audioPlayer = AVAudioPlayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +25,9 @@ class ViewController: UIViewController {
     }
     @IBAction func shadeButton(_ sender: UIButton) {
         buttonPress += 1
+        
+        audioPlayer = try! AVAudioPlayer(contentsOf: shadeSound!)
+        audioPlayer.play()
         // shadeCountLabel.text = "Shade Count \(count)"
     }
     
